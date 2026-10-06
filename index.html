@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio Web Oficial</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- CABECERA DE NAVEGACIÓN -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">MiTienda</div>
+            <nav class="menu-principal" id="menuPrincipal">
+                <ul>
+                    <li><a href="#" class="active">Inicio</a></li>
+                    <li><a href="#ventas-seccion">Ventas Por Mayor 📦</a></li>
+                    <li><a href="#ventas-seccion">Ventas Por Menor 🛍️</a></li>
+                    <li><a href="#quienes-somos">Quiénes Somos</a></li>
+                    <li><a href="#contacto-formulario">Contacto</a></li>
+                </ul>
+            </nav>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <!-- BOTÓN DEL CARRITO EN EL HEADER -->
+                <button class="cart-icon-btn" id="cartToggleBtn">
+                    🛒 <span id="cartCount" class="cart-count">0</span>
+                </button>
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="contenedor-principal">
+
+        <!-- 1. SECCIÓN DE PRODUCTOS DESTACADOS -->
+        <section class="productos-destacados">
+            <h2 class="titulo-seccion">🌟 Nuestros Productos Destacados</h2>
+            <div class="Subcontenedor">
+                <article class="xcontenedor">
+                    <h2>Producto 1</h2>
+                    <img src="imagenes/imagen1.png" alt="Producto 1">
+                    <p>Descripción del primer producto en catálogo.</p>
+                    <div class="precio-container">
+                        <span class="precio">$49.99</span>
+                        <button class="btn-card" data-nombre="Producto 1" data-precio="49.99">Añadir al Carrito 🛒</button>
+                    </div>
+                </article>
+
+                <article class="xcontenedor">
+                    <h2>Producto 2</h2>
+                    <img src="imagenes/imagen2.png" alt="Producto 2">
+                    <p>Descripción del segundo producto en catálogo.</p>
+                    <div class="precio-container">
+                        <span class="precio">$79.99</span>
+                        <button class="btn-card" data-nombre="Producto 2" data-precio="79.99">Añadir al Carrito 🛒</button>
+                    </div>
+                </article>
+
+                <article class="xcontenedor">
+                    <h2>Producto 3</h2>
+                    <img src="imagenes/imagen3.png" alt="Producto 3">
+                    <p>Descripción del tercer producto en catálogo.</p>
+                    <div class="precio-container">
+                        <span class="precio">$99.99</span>
+                        <button class="btn-card" data-nombre="Producto 3" data-precio="99.99">Añadir al Carrito 🛒</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 2. SECCIÓN DE VENTAS POR MAYOR Y MENOR -->
+        <section id="ventas-seccion" class="ventas-container">
+            <div class="venta-box mayor">
+                <h2>📦 Ventas Por Mayor 🚚</h2>
+                <p>¡Haz crecer tu negocio con nosotros! Promociones y precios especiales por volumen.</p>
+                <ul>
+                    <li>🔥 Descuentos exclusivos a partir de 12 unidades.</li>
+                    <li>📋 Atención personalizada para negocios y distribuidores.</li>
+                    <li>🚛 Envíos prioritarios y seguros a todo el país.</li>
+                    <li>💳 Facilidades de pago y facturación directa.</li>
+                </ul>
+            </div>
+
+            <div class="venta-box menor">
+                <h2>🛍️ Ventas Por Menor 🛒</h2>
+                <p>Compra tus productos favoritos por unidad con la mejor garantía y rapidez.</p>
+                <ul>
+                    <li>✨ Envíos rápidos directos a la puerta de tu casa.</li>
+                    <li>🎁 Garantía de satisfacción de 30 días.</li>
+                    <li>💳 Múltiples métodos de pago seguros.</li>
+                    <li>⭐ Sin mínimos de compra.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 3. SECCIÓN QUIÉNES SOMOS -->
+        <section id="quienes-somos" class="seccion-info">
+            <h2>🏢 Quiénes Somos</h2>
+            <p>Somos una empresa dedicada a ofrecer la mejor calidad en productos para nuestros clientes, con cobertura de atención a nivel nacional tanto para compras individuales como para distribuidores mayoristas.</p>
+        </section>
+
+        <!-- 4. FORMULARIO DE CONTACTO/PEDIDOS -->
+        <section id="contacto-formulario" class="formulario-seccion">
+            <h2>📩 Realiza tu Pedido o Consulta</h2>
+            <form class="formulario-contacto" id="formContacto">
+                <div class="campo">
+                    <label for="nombre">Nombre Completo 👤</label>
+                    <input type="text" id="nombre" placeholder="Tu nombre" required>
+                </div>
+                <div class="campo">
+                    <label for="correo">Correo Electrónico ✉️</label>
+                    <input type="email" id="correo" placeholder="ejemplo@correo.com" required>
+                </div>
+                <div class="campo">
+                    <label for="tipoCompra">Tipo de Compra 🏷️</label>
+                    <select id="tipoCompra">
+                        <option value="menor">Compra Por Menor 🛍️</option>
+                        <option value="mayor">Compra Por Mayor 📦</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="mensaje">Mensaje o Detalle del Pedido 📝</label>
+                    <textarea id="mensaje" rows="4" placeholder="Escribe aquí tu consulta o los productos que deseas adquirir..." required></textarea>
+                </div>
+                <button type="submit" class="btn-enviar">Enviar Mensaje 🚀</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- PANEL LATERAL DEL CARRITO DE COMPRAS -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-header">
+            <h3>Tu Carrito de Compras 🛒</h3>
+            <button class="cart-close-btn" id="cartCloseBtn">✖</button>
+        </div>
+        <div class="cart-body" id="cartItemsContainer">
+            <p class="empty-cart">El carrito está vacío.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-summary">
+                <p>Total de productos: <strong id="totalCantidad">0</strong></p>
+                <p class="total-price">Total a pagar: <strong id="totalPrecio">$0.00</strong></p>
+            </div>
+            <button class="btn-checkout" id="btnCheckout">Finalizar Compra 💳</button>
+        </div>
+    </div>
+
+    <!-- CHATBOT FLOTANTE CON 50 PREGUNTAS -->
+    <button class="chat-toggle-btn" id="chatToggleBtn">💬</button>
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-header">
+            <h3>Asistente Virtual 🤖</h3>
+            <button class="chat-close-btn" id="chatCloseBtn">✖</button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="chat-message bot">¡Hola! 👋 Selecciona una de las 50 preguntas disponibles:</div>
+        </div>
+        <div class="chat-input-area">
+            <select id="chatSelect" class="chat-select">
+                <option value="">-- Selecciona una pregunta --</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- PIE DE PÁGINA CON REDES SOCIALES -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>MiTienda 🛒</h3>
+                <p>Ventas por mayor y menor con envíos garantizados.</p>
+            </div>
+            <div class="social-section">
+                <h4>Síguenos en Redes 📲</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
